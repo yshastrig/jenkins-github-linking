@@ -10,7 +10,9 @@ pipeline{
             }
         }
         stage('Ansible Execution'){
-            sh 'ansible-playbook -v playlist.yml'
+            steps{
+                sh 'ansible-playbook -v playlist.yml'
+            }
         }
     }
 }
