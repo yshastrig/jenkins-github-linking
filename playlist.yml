@@ -1,7 +1,6 @@
 ---
    - name: "Ansible sample testing"
      hosts: localhost
-     remote_user: adminuser
      become: true
      tasks:
 
@@ -18,5 +17,5 @@
 
         - name: "Output the text inside file"
           ansible.builtin.shell:
-            cmd: sudo systemctl status jenkins
+            cmd: cat hello.txt
  
