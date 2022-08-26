@@ -7,10 +7,6 @@
         - name: "host reachability"
           ping:
 
-        - name: "Removes hello.txt file if it exists"
-          ansible.builtin.shell:
-            cmd: rm -f hello.txt
-
         - name: "Creating file and inserting text into it"
           ansible.builtin.shell:
             cmd: echo "Hello there! this is the file created again" >> hello.txt
