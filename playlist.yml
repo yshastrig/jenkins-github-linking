@@ -7,11 +7,11 @@
         - name: "host reachability"
           ping:
 
-        - name: "Creating file and inserting text into it"
-          ansible.builtin.shell:
-            cmd: echo "Hello there! this is the file created again" >> hello.txt
-
-        - name: "Output the text inside file"
-          ansible.builtin.shell:
-            cmd: cat hello.txt
+        - name: ensure nginx is at the latest version
+          apt: name=nginx state=latest
+    
+        - name: start nginx
+          service:
+            name: nginx
+            state: started
  
