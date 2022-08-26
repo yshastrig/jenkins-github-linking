@@ -6,8 +6,7 @@ pipeline{
     stages{
         stage('SCM Checkout'){
             steps{
-                git 'https://github.com/yshastrig/jenkins-github-linking'
-            }
+                git branch: 'main', url: 'https://github.com/yshastrig/jenkins-github-linking'            }
         }
         stage('Ansible Execution'){
             steps{
